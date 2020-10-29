@@ -1,0 +1,48 @@
+Note: These are the tables that will be included in the first database
+products
+  -id:(INT (11), auto_increment, primary_key)
+  -name (VARCHAR(100))
+  -description (TEXT)
+  -price (VARCHAR(20))
+  -category:fk (int (11), foreign_key to products_categories id )
+  -image (VARCHAR(100))
+products_categories
+  -id:(INT (11), auto_increment, primary_key)
+  -name (VARCHAR(100))
+  -description (TEXT)
+  -image (VARCHAR(100))
+customers
+  -id:(INT (11), auto_increment, primary_key)
+  -first_name (VARCHAR(100))
+  -last_name (VARCHAR(100))
+  -email (VARCHAR(100))
+  -password (VARCHAR(100))
+  -avatar (VARCHAR(100))
+  -join_date (TIME_STAMP, DEFAULT:CURRENT_DATE )
+customers_address
+  -id:(INT (11), auto_increment, primary_key)
+  -customers_id (int (11), foreign_key to customers_id  )
+  -address (VARCHAR(100))
+  -address2 (VARCHAR(100))
+  -city (VARCHAR(100))
+  -state (VARCHAR(100))
+  -zip_code (VARCHAR(100))
+reviews
+  -id:(INT (11), auto_increment, primary_key)
+  -title (VARCHAR(100))
+  -body (TEXT)
+  -rating (INT(2))
+  -customer (int (11), foreign_key to customers_id  )
+  -product (int (11), foreign_key to products_id  )
+  -review_date (TIME_STAMP, DEFAULT:CURRENT_DATE )
+pages
+  -id:(INT (11), auto_increment, primary_key)
+  -title (VARCHAR(100))
+  -body (TEXT)
+  -category (int (11), foreign_key to products_categories id )
+  -create_date (TIME_STAMP, DEFAULT:CURRENT_DATE )
+pages_categoires
+  -id:(INT (11), auto_increment, primary_key)
+  -name (VARCHAR(100))
+  -description (TEXT)
+  -image (VARCHAR(100))
