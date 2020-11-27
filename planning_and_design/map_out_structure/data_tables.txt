@@ -4,10 +4,10 @@ products
   -name (VARCHAR(100))
   -description (TEXT)
   -price (VARCHAR(20))
-  -category:fk (int (11), foreign_key to products_categories id )
+  -category:fk (int (11), foreign_key to products_categories pc_id )
   -image (VARCHAR(100))
 products_categories
-  -id:(INT (11), auto_increment, primary_key)
+  -pc_id:(INT (11), auto_increment, primary_key)
   -name (VARCHAR(100))
   -description (TEXT)
   -image (VARCHAR(100))
